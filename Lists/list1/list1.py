@@ -34,7 +34,7 @@ def add_item_front(lst, a):
     This function takes a list and an item,
     returning the list with the item prepended to the list
     """
-    pass  # implement me
+    return lst.insert(0, a)
 
 def add_item_end(lst, a):
     """
