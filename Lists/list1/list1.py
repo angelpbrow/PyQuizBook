@@ -34,13 +34,15 @@ def add_item_front(lst, a):
     This function takes a list and an item,
     returning the list with the item prepended to the list
     """
-    return lst.insert(0, a)
+    lst2 = lst.insert(0, a)
+    return lst2
 
 def add_item_end(lst, a):
     """
     This function takes a list and an item,
     returning the list with the item appended to the list
     """
+
     return lst.append(a)
 
 def add_list_to_list(lsta, lstb):
@@ -55,7 +57,7 @@ def list_and_list_to_tuple(lsta, lstb):
     This function takes two lists and returns a tuple containing the two lists
     """
     lstc = lsta + lstb
-    pass # implement me
+    return tuple(lstc)
 
 def list_and_list_to_list(lsta, lstb):
     """
@@ -75,13 +77,14 @@ def list_from_range(n):
     lst = []
     for n in range(0, n):
         lst.append(n)
-    pass # implement me
+    return lst
 
 def list_from_range2(n, m):
     """
     This function returns list with n..m (without m) as integers in a list
     """
-    pass # implement me
+    lst2 = [nums[n:m] for nums in range (n,m)]
+    return lst2
 
 def list_from_range3(n, m):
     """
