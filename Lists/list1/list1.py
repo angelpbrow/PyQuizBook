@@ -27,7 +27,7 @@ def drop_mangle(lst):
     """
     This function takes a list and returns a list with the first two items AND last item removed.
     """
-    pass  # implement me
+    return lst[2:-1]
 
 def add_item_front(lst, a):
     """
@@ -54,6 +54,7 @@ def list_and_list_to_tuple(lsta, lstb):
     """
     This function takes two lists and returns a tuple containing the two lists
     """
+    lstc = lsta + lstb
     pass # implement me
 
 def list_and_list_to_list(lsta, lstb):
@@ -61,7 +62,7 @@ def list_and_list_to_list(lsta, lstb):
     This function takes two lists and returns a list containing the two lists
     """
     lstc = lsta + lstb
-    return lstc
+    return tuple(lstc)
 
 ##
 ##
@@ -144,8 +145,6 @@ def length_of(lst):
     """
     return the length of the list
     """
-    pass
+    return len(lst)
 
 
-def list1():
-    return None
