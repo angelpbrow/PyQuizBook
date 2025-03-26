@@ -72,6 +72,9 @@ def list_from_range(n):
     """
     This function returns list with 0..n as integers in a list
     """
+    lst = []
+    for n in range(0, n):
+        lst.append(n)
     pass # implement me
 
 def list_from_range2(n, m):
