@@ -150,7 +150,11 @@ def leave_item_in(lst, aaa):
     """
     Leave all occurrences of a specific item in a list.
     """
-    pass
+    lst2 = []
+    for n in lst:
+        if n == aaa:
+            lst2.append(n)
+    return lst2
 
 def length_of(lst):
     """
