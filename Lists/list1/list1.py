@@ -7,20 +7,21 @@ def create_list_from_tuple(t):
     """
     This function takes a tuple of elements and returns a list containing those elements of the tuple.
     """
-    pass  # implement me
+    return list(t)
     
 def drop_last(lst):
     """
     This function takes a list and returns a list with the last item removed.
     """
-    pass  # implement me
+
+    return lst[:-1]
 
 
 def drop_first_two(lst):
     """
     This function takes a list and returns a list with the first two items removed.
     """
-    pass  # implement me
+    return lst[2:]
 
 def drop_mangle(lst):
     """
@@ -40,14 +41,14 @@ def add_item_end(lst, a):
     This function takes a list and an item,
     returning the list with the item appended to the list
     """
-    pass  # implement me
+    return lst.append(a)
 
 def add_list_to_list(lsta, lstb):
     """
     This function takes two lists and appends one to the other,
     returning a list
     """
-    pass  # implement me
+    return lsta.extend(lstb)
 
 def list_and_list_to_tuple(lsta, lstb):
     """
@@ -59,7 +60,8 @@ def list_and_list_to_list(lsta, lstb):
     """
     This function takes two lists and returns a list containing the two lists
     """
-    pass # implement me
+    lstc = lsta + lstb
+    return lstc
 
 ##
 ##
@@ -143,3 +145,7 @@ def length_of(lst):
     return the length of the list
     """
     pass
+
+
+def list1():
+    return None
