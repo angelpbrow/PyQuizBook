@@ -56,15 +56,16 @@ def list_and_list_to_tuple(lsta, lstb):
     """
     This function takes two lists and returns a tuple containing the two lists
     """
-    lstc = lsta + lstb
-    return tuple(lstc)
+    
+    tup = (lsta, lstb)
+    return tup
 
 def list_and_list_to_list(lsta, lstb):
     """
     This function takes two lists and returns a list containing the two lists
     """
-    lstc = lsta + lstb
-    return tuple(lstc)
+    lstc = [lsta, lstb]
+    return lstc
 
 ##
 ##
