@@ -141,7 +141,10 @@ def remove_item_from(lst, aaa):
     """
     Remove all occurrences of a specific item from a list.
     """
-    pass
+    for n in lst:
+        if n == aaa:
+            lst.remove(n)
+    return lst
 
 def leave_item_in(lst, aaa):
     """
