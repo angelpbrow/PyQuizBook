@@ -107,7 +107,7 @@ def rev_list(lst):
     This function returns list which is a reverse of the argument list
     (read the test)
     """
-    pass # implement me
+    return lst[::-1]
   
 def concat_list_indexwise(lst1, lst2):
     """
