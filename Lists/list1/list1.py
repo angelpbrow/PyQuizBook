@@ -91,7 +91,8 @@ def list_from_range3(n, m):
     """
     This function returns list with n..m (including m(!)) as integers in a list
     """
-    pass # implement me
+    lst = [p for p in range(n,m+1)]
+    return lst
 
 def list_from_range4(n, m):
     """
