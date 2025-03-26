@@ -123,7 +123,8 @@ def square_each_item(lst):
     This function returns list which each item in argument list has been squared
     (read the test)
     """
-    pass # implement me
+    lst = [nums ** 2 for nums in lst]
+    return lst
 
 def remove_empty_strs(lst):
      """
