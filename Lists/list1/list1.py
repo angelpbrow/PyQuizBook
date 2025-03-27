@@ -8,7 +8,8 @@ def create_list_from_tuple(t):
     This function takes a tuple of elements and returns a list containing those elements of the tuple.
     """
     return list(t)
-    
+
+
 def drop_last(lst):
     """
     This function takes a list and returns a list with the last item removed.
@@ -21,7 +22,9 @@ def drop_first_two(lst):
     """
     This function takes a list and returns a list with the first two items removed.
     """
+
     return lst[2:]
+
 
 def drop_mangle(lst):
     """
@@ -29,13 +32,15 @@ def drop_mangle(lst):
     """
     return lst[2:-1]
 
+
 def add_item_front(lst, a):
     """
     This function takes a list and an item,
     returning the list with the item prepended to the list
     """
-    lst2 = lst.insert(0, a)
-    return lst2
+
+    return [a] + lst
+
 
 def add_item_end(lst, a):
     """
@@ -43,22 +48,25 @@ def add_item_end(lst, a):
     returning the list with the item appended to the list
     """
 
-    return lst.append(a)
+    return lst + [a]
+
 
 def add_list_to_list(lsta, lstb):
     """
     This function takes two lists and appends one to the other,
     returning a list
     """
-    return lsta.extend(lstb)
+    return lsta + lstb
+
 
 def list_and_list_to_tuple(lsta, lstb):
     """
     This function takes two lists and returns a tuple containing the two lists
     """
-    
+
     tup = (lsta, lstb)
     return tup
+
 
 def list_and_list_to_list(lsta, lstb):
     """
@@ -66,6 +74,7 @@ def list_and_list_to_list(lsta, lstb):
     """
     lstc = [lsta, lstb]
     return lstc
+
 
 ##
 ##
@@ -80,32 +89,39 @@ def list_from_range(n):
         lst.append(n)
     return lst
 
+
 def list_from_range2(n, m):
     """
     This function returns list with n..m (without m) as integers in a list
     """
-    lst2 = [nums[n:m] for nums in range (n,m)]
-    return lst2
+    lst = [lst for lst in range(n, m)]
+    return lst
+
 
 def list_from_range3(n, m):
     """
     This function returns list with n..m (including m(!)) as integers in a list
     """
-    lst = [p for p in range(n,m+1)]
+    lst = [p for p in range(n, m + 1)]
     return lst
+
 
 def list_from_range4(n, m):
     """
     This function returns list with n..m (WITHOUT n and including m) as integers in a list
     """
-    pass # implement me
+    lst = [p for p in range(n + 1, m + 1)]
+    return lst
+
 
 def list_from_range_by(n, step):
     """
     This function returns list with 0..n as integers by step in a list
     (read the test)
     """
-    pass # implement me
+    lst = [lst for lst in range(0, n, step)]
+    return lst
+
 
 def rev_list(lst):
     """
@@ -113,15 +129,22 @@ def rev_list(lst):
     (read the test)
     """
     return lst[::-1]
-  
+
+
 def concat_list_indexwise(lst1, lst2):
     """
-    Write a program to add two lists index-wise. 
-    Create a new list that contains the 0th index item from both the list, 
-    then the 1st index item, and so on till the last element. 
+    Write a program to add two lists index-wise.
+    Create a new list that contains the 0th index item from both the list,
+    then the 1st index item, and so on till the last element.
     Any leftover items will get added at the end of the new list.
     """
-    parseString # implement me
+    lst3 = []
+    for i in range(len(lst1)):
+        lsta = (lst1[i] + lst2[i])
+        lst3.append(lsta)
+
+    return lst3
+
 
 def square_each_item(lst):
     """
@@ -131,11 +154,15 @@ def square_each_item(lst):
     lst = [nums ** 2 for nums in lst]
     return lst
 
+
 def remove_empty_strs(lst):
-     """
-     Remove empty strings from the list of strings
-     """
-     pass
+    """
+    Remove empty strings from the list of strings
+    """
+    for n in lst:
+        if n == '':
+            lst.remove(n)
+    return lst
 
 
 def remove_item_from(lst, aaa):
@@ -147,6 +174,7 @@ def remove_item_from(lst, aaa):
             lst.remove(n)
     return lst
 
+
 def leave_item_in(lst, aaa):
     """
     Leave all occurrences of a specific item in a list.
@@ -156,6 +184,7 @@ def leave_item_in(lst, aaa):
         if n == aaa:
             lst2.append(n)
     return lst2
+
 
 def length_of(lst):
     """
